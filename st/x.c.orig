@@ -450,6 +450,7 @@ int
 mouseaction(XEvent *e, uint release)
 {
 	MouseShortcut *ms;
+	MouseKey *mk;
 
 	/* ignore Button<N>mask for Button<N> - it's set on release */
 	uint state = e->xbutton.state & ~buttonmask(e->xbutton.button);
